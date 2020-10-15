@@ -51,7 +51,7 @@ class PizzaGraph extends BotoElement {
           a 15.9155 15.9155 0 0 1 0 -31.831"
         fill="none"
         stroke="${item.color}";
-        stroke-width="3";
+        stroke-width="4";
         stroke-dasharray="${item.percent * 100}, 100"
         style="transform-origin: 50% 50%; transform: rotate(${item.rotation}deg);"
         data-label="${item.text}"
@@ -76,13 +76,13 @@ class PizzaGraph extends BotoElement {
     Array.from(this.shadowRoot.querySelectorAll('.graphic path')).forEach((item) => {
       item.addEventListener('mouseover', (e) => {
         e.stopPropagation()
-        e.target.style.strokeWidth = "4"
+        e.target.style.strokeWidth = "3"
         e.target.style.opacity = ".8"
         preview.innerHTML = getInfo(e.target.getAttribute('data-label'))
       })
       item.addEventListener('mouseout', (e) => {
         preview.innerHTML = ''
-        e.target.style.strokeWidth = "3"
+        e.target.style.strokeWidth = "4"
         e.target.style.opacity = "1"
       })
     })

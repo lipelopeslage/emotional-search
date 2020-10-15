@@ -14,7 +14,6 @@ class Button extends BotoElement {
     return `
     <style>${css}</style>
       <button>
-        <slot></slot>
       </button>
   `
   }
